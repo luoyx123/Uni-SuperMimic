@@ -163,7 +163,10 @@ def main(cfg: DictConfig) -> None:
             env_cfg_override=env_override,
         )
         if play_only:
-            from unisupermimic.tasks.motion_tracking.g1.supermimic.evaluate import evaluate
+            if str(cfg.training.task_name) == "Roban2SuperMimic":
+                from unisupermimic.tasks.motion_tracking.roban2.supermimic.evaluate import evaluate
+            else:
+                from unisupermimic.tasks.motion_tracking.g1.supermimic.evaluate import evaluate
 
             assert checkpoint is not None
             saved = torch.load(checkpoint, map_location=device, weights_only=True)

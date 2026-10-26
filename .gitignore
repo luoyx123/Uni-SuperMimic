@@ -17,4 +17,5 @@ runs/
 outputs/
 *.pt
 src/unisupermimic/assets/robots/g1/assets/
+src/unisupermimic/assets/robots/roban2/
 src/unisupermimic/assets/motions/

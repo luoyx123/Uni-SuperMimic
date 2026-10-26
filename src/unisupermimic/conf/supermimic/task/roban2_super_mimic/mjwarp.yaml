@@ -1,0 +1,15 @@
+# @package _global_
+defaults:
+  - /task/roban2_super_mimic/base
+  - _self_
+
+training:
+  task_name: Roban2SuperMimic
+  sim_backend: mjwarp
+
+algo:
+  num_envs: 256
+
+env:
+  mjwarp_nconmax: 128
+  mjwarp_njmax: 500
