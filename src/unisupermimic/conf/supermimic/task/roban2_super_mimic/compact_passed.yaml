@@ -1,0 +1,13 @@
+# @package _global_
+defaults:
+  - /task/roban2_super_mimic/mjwarp
+  - _self_
+
+env:
+  commands:
+    motion:
+      motion_files:
+        - ${oc.env:ROBAN2_COMPACT_LIBRARY}
+
+algo:
+  num_envs: 2048
